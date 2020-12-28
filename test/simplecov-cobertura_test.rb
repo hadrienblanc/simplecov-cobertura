@@ -54,7 +54,7 @@ class CoberturaFormatterTest < Test::Unit::TestCase
 
     sources = doc.xpath '/coverage/sources/source'
     assert_equal 1, sources.length
-    assert_equal 'simplecov-cobertura', File.basename(sources.first.text)
+    assert_equal './', File.basename(sources.first.text)
 
     packages = doc.xpath '/coverage/packages/package'
     assert_equal 1, packages.length
@@ -104,7 +104,7 @@ class CoberturaFormatterTest < Test::Unit::TestCase
 
     sources = doc.xpath '/coverage/sources/source'
     assert_equal 1, sources.length
-    assert_equal 'simplecov-cobertura', File.basename(sources.first.text)
+    assert_equal './', File.basename(sources.first.text)
 
     packages = doc.xpath '/coverage/packages/package'
     assert_equal 1, packages.length

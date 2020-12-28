@@ -38,7 +38,7 @@ module SimpleCov
 
         coverage.add_element(sources = REXML::Element.new('sources'))
         sources.add_element(source = REXML::Element.new('source'))
-        source.text = SimpleCov.root
+        source.text = './'
 
         coverage.add_element(packages = REXML::Element.new('packages'))
 
